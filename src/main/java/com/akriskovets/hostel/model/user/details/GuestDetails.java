@@ -1,14 +1,12 @@
 package com.akriskovets.hostel.model.user.details;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.akriskovets.hostel.model.user.User;
+import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
-@Getter
+@Data
 @Entity
 @Table(name = "guest_details")
 public class GuestDetails {
@@ -19,4 +17,7 @@ public class GuestDetails {
 
     @Column(name = "passport")
     private String passport;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    private User user;
 }

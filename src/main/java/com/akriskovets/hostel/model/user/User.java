@@ -2,10 +2,7 @@ package com.akriskovets.hostel.model.user;
 
 import com.akriskovets.hostel.model.user.details.mployee.EmployeeDetails;
 import com.akriskovets.hostel.model.user.details.GuestDetails;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
@@ -37,10 +34,10 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "employee_details")
+    @OneToOne(fetch = FetchType.LAZY)
     private EmployeeDetails employeeDetails;
 
-    @Column(name = "guest_details")
+    @OneToOne(fetch = FetchType.LAZY)
     private GuestDetails guestDetails;
 
     @Column(name = "user_role")
