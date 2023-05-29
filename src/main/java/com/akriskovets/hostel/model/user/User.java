@@ -1,7 +1,6 @@
 package com.akriskovets.hostel.model.user;
 
-import com.akriskovets.hostel.model.user.details.mployee.EmployeeDetails;
-import com.akriskovets.hostel.model.user.details.GuestDetails;
+import com.akriskovets.hostel.model.user.details.employee.EmployeeDetails;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -37,9 +36,9 @@ public class User {
     @OneToOne(fetch = FetchType.LAZY)
     private EmployeeDetails employeeDetails;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    private GuestDetails guestDetails;
-
     @Column(name = "user_role")
     private UserRole userRole;
+
+    @Column(name = "passport")
+    private String passport;
 }

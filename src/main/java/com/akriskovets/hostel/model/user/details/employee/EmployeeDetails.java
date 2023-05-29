@@ -1,4 +1,4 @@
-package com.akriskovets.hostel.model.user.details.mployee;
+package com.akriskovets.hostel.model.user.details.employee;
 
 import com.akriskovets.hostel.model.Room;
 import com.akriskovets.hostel.model.user.User;
@@ -13,7 +13,7 @@ import java.util.List;
 public class EmployeeDetails {
 
     @Id
-    @Column(name = "empl_details_id")
+    @Column(name = "employee_details_id")
     private Long id;
 
     @OneToMany(mappedBy="employeeDetails")

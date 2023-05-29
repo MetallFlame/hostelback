@@ -1,4 +1,4 @@
-package com.akriskovets.hostel.model.user.details.mployee;
+package com.akriskovets.hostel.model.user.details.employee;
 
 import jakarta.persistence.*;
 import lombok.Data;
